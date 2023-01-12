@@ -11,6 +11,10 @@
     padding: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-size:1rem;
+}
+
 a {
     text-decoration: none;
     position: relative;
@@ -165,5 +169,52 @@ body {
     background-color: transparent;
     border: 2px solid var(--sidebar-color);
     color: var(--sidebar-color);
-    transition: all 0.5s;
+    transition: all 0.3s;
+}
+
+.content-left h1 {
+    font-size: 1.5rem;
+}
+
+.content {
+    display:grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 1.7rem 1.2rem;
+    gap:15px;
+}
+
+.content-left {
+    display:grid;
+    grid-template-rows: auto 1fr;
+    gap:20px;
+}
+
+.project-card-wrapper {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    padding: 1.5rem 1.5rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.438);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card > h2 {
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.project-card::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 100%;
+    background-color: rgb(255, 196, 0);
 }
