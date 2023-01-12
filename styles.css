@@ -8,6 +8,31 @@
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+}
+
+a::after {
+    position: absolute;
+    content: '';
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: 0.250s;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+a:visited {
+    color: white;
+}
+
 ul {
     list-style: none;
 }
@@ -44,4 +69,43 @@ body {
 .sidebar ul {
     display: grid;
     gap: 15px;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: rgb(255, 196, 0);
+}
+
+.header {
+    display:grid;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.267);
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    padding: 1rem 2rem;
+}
+
+.content {
+    position:relative;
+    z-index: -1;
+}
+
+.header-top {
+    display: grid;
+    grid-template-columns: auto 3fr 1fr;
+    gap: 15px;
+    align-items: center;
+}
+
+.user-info {
+    display:grid; 
+    grid-template-columns: auto auto 1fr;
+    gap: 10px;
+    align-items: center;
+    justify-self: end;
+}
+
+#search-bar {
+    height: 50%;
 }
